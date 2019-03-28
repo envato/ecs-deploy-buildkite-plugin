@@ -9,7 +9,7 @@ task_definition=${BUILDKITE_PLUGIN_ECS_DEPLOY_TASK_DEFINITION?}
 
 ## This is the template definition of your containers
 container_definitions_json=$(jq --arg IMAGE "$image" \
-'.taskDefinition.containerDefinitions[0].image=$IMAGE' \
+'.[0].image=$IMAGE' \
 "$task_definition"
 )
 
