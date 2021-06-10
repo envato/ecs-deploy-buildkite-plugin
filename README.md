@@ -111,6 +111,18 @@ The Docker networking mode to use for the containers in the task. The valid valu
 
 Example: `"awsvpc"`
 
+### `memory` (optional)
+
+The task level memory configuration (versus the per container memory configuration). This is required for Fargate.
+
+Example: `512`
+
+### `cpu` (optional)
+
+The task level cpu configuration (versus the per container cpu configuration). This is required for Fargate.
+
+Example: `512`
+
 ## AWS Roles
 
 At a minimum this plugin requires the following AWS permissions to be granted to the agent running this step:
